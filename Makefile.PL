@@ -9,7 +9,7 @@ WriteMakefile(
   NAME      => 'POEx::Trait::ExtraInitialization',
   AUTHOR    => 'Nicholas\ Perez\ \<nperez\@cpan\.org\>',
   ABSTRACT  => 'A\ Trait\ for\ SessionInstantiation\ to\ enable\ extra\ initialization',
-  VERSION   => '0.092670',
+  VERSION   => '0.092720',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'gpl') : ()),
   PREREQ_PM    => {

@@ -1,5 +1,5 @@
 {package POEx::Trait::ExtraInitialization;
-our $VERSION = '0.092670';
+our $VERSION = '0.092720';
 }
 
 
@@ -34,7 +34,7 @@ POEx::Trait::ExtraInitialization - Provides a initialization behaviors for POEx:
 
 =head1 VERSION
 
-version 0.092670
+version 0.092720
 
 =head1 SYNOPSIS
 

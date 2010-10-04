@@ -1,0 +1,46 @@
+{
+   "abstract" : "Provides a initialization behaviors for POEx::Role::SessionInstantiation objects",
+   "author" : [
+      "Nicholas Perez <nperez@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.102341, CPAN::Meta::Converter version 2.102400",
+   "license" : [
+      "gpl_3"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "POEx-Trait-ExtraInitialization",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "MooseX::Declare" : 0,
+            "MooseX::Types::Moose" : 0,
+            "POEx::Role::SessionInstantiation::Meta::Session::Events" : 0
+         }
+      },
+      "test" : {
+         "requires" : {
+            "POE" : 0,
+            "POEx::Role::SessionInstantiation" : 0,
+            "Test::More" : 0
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/nperez/pxtei.git"
+      }
+   },
+   "version" : "1.102770"
+}
+

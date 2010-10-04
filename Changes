@@ -1,4 +1,11 @@
-Revision history for POEx-Trait-ExtraInitialization: 0.092720
+Revision history for POEx-Trait-ExtraInitialization: 1.102770
+
+1.102770  2010-10-04 01:20:23 America/Chicago
+        Update dist.ini and add weaver.ini
+        Move braces to work around MXD bug in newer perls
 
 0.092720  2009-09-29 08:01:06 UTC
+        Second initial release because it wasn't indexed apparently
+
+0.092670  2009-09-24 23:45:50 UTC
         Initial release

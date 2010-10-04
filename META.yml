@@ -1,16 +1,24 @@
 ---
-abstract: 'A Trait for SessionInstantiation to enable extra initialization'
+abstract: 'Provides a initialization behaviors for POEx::Role::SessionInstantiation objects'
 author:
   - 'Nicholas Perez <nperez@cpan.org>'
-generated_by: 'Dist::Zilla version 1.092680'
+build_requires:
+  POE: 0
+  POEx::Role::SessionInstantiation: 0
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.31
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.102341, CPAN::Meta::Converter version 2.102400'
 license: gpl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: POEx-Trait-ExtraInitialization
 requires:
-  POEx::Role::SessionInstantiation: 0.092673
-  Test::More: 0.92
+  MooseX::Declare: 0
+  MooseX::Types::Moose: 0
+  POEx::Role::SessionInstantiation::Meta::Session::Events: 0
 resources:
   repository: git://github.com/nperez/pxtei.git
-version: 0.092720
+version: 1.102770

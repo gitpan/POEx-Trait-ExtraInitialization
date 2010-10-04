@@ -1,14 +1,13 @@
 {package POEx::Trait::ExtraInitialization;
-our $VERSION = '0.092720';
-}
-
+BEGIN {
+  $POEx::Trait::ExtraInitialization::VERSION = '1.102770';
+}}
 
 #ABSTRACT: Provides a initialization behaviors for POEx::Role::SessionInstantiation objects
 
 use MooseX::Declare;
 
-role POEx::Trait::ExtraInitialization
-{
+role POEx::Trait::ExtraInitialization {
     with 'POEx::Role::SessionInstantiation::Meta::Session::Events';
     use MooseX::Types::Moose('CodeRef');
 
@@ -16,14 +15,12 @@ role POEx::Trait::ExtraInitialization
     has initialization_method => ( is => 'ro', isa => CodeRef, required => 1 );
 
 
-    after _start
-    {
+    after _start {
         $self->${\$self->initialization_method}();
     }
 }
 
 1;
-
 
 
 =pod
@@ -34,7 +31,7 @@ POEx::Trait::ExtraInitialization - Provides a initialization behaviors for POEx:
 
 =head1 VERSION
 
-version 0.092720
+version 1.102770
 
 =head1 SYNOPSIS
 
@@ -66,38 +63,35 @@ Otherwise, _start has already been fired, and too late for extra
 initialization to execute (BUILD is advised by SessionInstantiate to do Session
 allocation within POE which immediately calls _start).
 
-=head1 ATTRIBUTES
+=head1 PUBLIC_ATTRIBUTES
 
-=head2 initialization_method is: ro, isa: CodeRef, required: 1
+=head2 initialization_method
+
+    is: ro, isa: CodeRef, required: 1
 
 This attribute stores the code ref that will be called as method on the
 composed class.
 
-
-
-=head1 METHODS
+=head1 PRIVATE_METHODS
 
 =head2 after _start
 
 _start is advised to run the initialization method during the 'after' phase.
 The method receives no arguments other than the invocant
 
-
-
 =head1 AUTHOR
 
-  Nicholas Perez <nperez@cpan.org>
+Nicholas Perez <nperez@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2009 by Infinity Interactive.
+This software is Copyright (c) 2010 by Infinity Interactive.
 
 This is free software, licensed under:
 
   The GNU General Public License, Version 3, June 2007
 
-=cut 
-
+=cut
 
 
 __END__

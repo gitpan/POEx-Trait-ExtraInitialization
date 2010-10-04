@@ -7,14 +7,12 @@ use POEx::Role::SessionInstantiation
     traits => [ 'POEx::Trait::ExtraInitialization' ];
 
 
-my $sub = sub
-{
+my $sub = sub {
     pass('Our extra init was fired');
     isa_ok(shift, 'My::Session', 'Got the right self');
 };
 
-class My::Session
-{
+class My::Session {
     with 'POEx::Role::SessionInstantiation';
 }
 
